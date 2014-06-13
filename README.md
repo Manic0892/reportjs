@@ -1,4 +1,4 @@
-reprotjs
+reportjs
 ========
 
-A feedback web server for Chrome with GitHub issues integration.
+A feedback/bug reporting web server for Chrome with GitHub issues integration.
