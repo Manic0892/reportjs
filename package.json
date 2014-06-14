@@ -1,0 +1,23 @@
+{
+    "name": "reportjs",
+    "description": "A feedback/bug reporting web server for Node with GitHub issues integration.",
+    "version": "0.0.1",
+    "bugs": "https://github.com/Manic0892/reportjs/issues",
+    "repository": {"type": "git", "url": "https://github.com/Manic0892/reportjs"},
+    "license": "AGPL-3.0",
+    "dependencies": {
+        "body-parser": "1.0.2",
+        "connect": "3.0.0-rc.1",
+        "connect-flash": "0.1.1",
+        "cookie-parser": "1.0.1",
+        "express": "4.0.0",
+        "express-session": "1.0.3",
+        "express-summon-route": "0.0.5",
+        "jade": "1.3.1",
+        "mongodb": "1.4.2",
+        "mongoose": "3.8.8",
+        "nconf": "0.6.9",
+        "passport": "0.2.0",
+        "static-favicon": "1.0.2"
+    }
+}
