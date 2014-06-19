@@ -63,7 +63,7 @@ app.use(cookieParser());
 // ## Routes
 
 app.get('/', function(req,res) {
-	res.send("Report JS");
+	res.send("ReportJS");
 });
 
 // Log configuration options to console along with status updates.
