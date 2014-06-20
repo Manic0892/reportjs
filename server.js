@@ -20,21 +20,21 @@ var connect = require('connect');
 // ## Read config
 
 // We use nconf to read configuration options.  Command line arguments override config file options which override default options.
-//nconf.argv().file('./config.json');
-//nconf.defaults({
-//	ip: 'localhost',
-//	port: 8080,
-//	dbuser: "user",
-//	dbpass: "pass",
-//	session: "secret"
-//});
+nconf.argv().file('./config.json');
+nconf.defaults({
+	ip: 'localhost',
+	port: 8080,
+	dbuser: "user",
+	dbpass: "pass",
+	session: "secret"
+});
 
 // Read configuration files into global variables.
-//var ip = nconf.get('ip');
-//var port = nconf.get('port');
-//var dbUser = nconf.get('dbuser');
-//var dbPass = nconf.get('dbpass');
-//var sessionSecret = nconf.get('session');
+var ip = nconf.get('ip');
+var port = nconf.get('port');
+var dbUser = nconf.get('dbuser');
+var dbPass = nconf.get('dbpass');
+var sessionSecret = nconf.get('session');
 
 // ## Server config
 
@@ -55,9 +55,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 // Cookie parsing middleware.
 app.use(cookieParser());
-//// Session middleware.
-//app.use(session({secret:sessionSecret}));
-//// Flash middleware.
+// Session middleware.
+app.use(session({secret:sessionSecret}));
+// Flash middleware.
 //app.use(flash());
 
 // ## Routes
