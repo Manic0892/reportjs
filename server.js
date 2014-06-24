@@ -63,7 +63,7 @@ app.use(session({secret:sessionSecret}));
 // ## Routes
 
 app.get('/', function(req,res) {
-	res.send("ReportJS");
+	res.send("Report JS");
 });
 
 // Log configuration options to console along with status updates.
