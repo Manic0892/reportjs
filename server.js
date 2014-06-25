@@ -26,7 +26,8 @@ nconf.defaults({
 	port: 8080,
 	dbuser: "user",
 	dbpass: "pass",
-	session: "secret"
+	session: "secret",
+	base: ""
 });
 
 // Read configuration files into global variables.
@@ -35,6 +36,7 @@ var port = nconf.get('port');
 var dbUser = nconf.get('dbuser');
 var dbPass = nconf.get('dbpass');
 var sessionSecret = nconf.get('session');
+var base = nconf.get('base');
 
 // ## Server config
 
@@ -62,9 +64,23 @@ app.use(session({secret:sessionSecret}));
 
 // ## Routes
 
-app.get('/', function(req,res) {
-	res.send("Report JS");
+app.get(base + '/', function(req,res) {
+	res.send('Report JS');
 });
+
+app.get(base + '/report', function(req,res) {
+	res.send('Report an issue.');
+});
+
+app.post(base + '/report', function(req,res) {
+	res.send('Report an issue with prefilled information.');
+});
+
+app.post(base + '/report/submit', function(req,res) {
+	res.send('Finalizing submitted issue.');
+});
+
+
 
 // Log configuration options to console along with status updates.
 //console.log('Listening on ' + ip + ':' + port);
