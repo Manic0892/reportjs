@@ -63,6 +63,7 @@ app.use(session({secret:sessionSecret}));
 //app.use(flash());
 
 // ## Routes
+// Temporary for now
 
 app.get(base + '/', function(req,res) {
 	res.send('Report JS');
