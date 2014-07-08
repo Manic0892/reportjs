@@ -24,8 +24,7 @@ nconf.argv().file('./config.json');
 nconf.defaults({
 	ip: 'localhost',
 	port: 8080,
-	dbuser: "user",
-	dbpass: "pass",
+	dburl: false,
 	session: "secret",
 	base: ""
 });
@@ -33,10 +32,13 @@ nconf.defaults({
 // Read configuration files into global variables.
 var ip = nconf.get('ip');
 var port = nconf.get('port');
-var dbUser = nconf.get('dbuser');
-var dbPass = nconf.get('dbpass');
+var dburl = nconf.get('dburl');
 var sessionSecret = nconf.get('session');
 var base = nconf.get('base');
+
+if (!dburl) {
+	throw {name: 'FatalError', message: 'NO DB URL PROVIDED!'};
+}
 
 // ## Server config
 
