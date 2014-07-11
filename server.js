@@ -68,7 +68,7 @@ app.use(session({secret:sessionSecret}));
 // Temporary for now
 
 app.get(base + '/', function(req,res) {
-	res.send('ReportJS');
+	res.send('Report JS');
 });
 
 app.get(base + '/report', function(req,res) {
