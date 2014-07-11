@@ -68,8 +68,6 @@ var db = false;
 
 require('./routes')(app, db);
 
-
-
 // Log configuration options to console along with status updates.
 //console.log('Listening on ' + ip + ':' + port);
 //console.log('Session secret is ' + sessionSecret);
