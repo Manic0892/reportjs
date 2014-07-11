@@ -64,24 +64,9 @@ app.use(session({secret:sessionSecret}));
 // Flash middleware.
 //app.use(flash());
 
-// ## Routes
-// Temporary for now
+var db = false;
 
-app.get(base + '/', function(req,res) {
-	res.send('ReportJS');
-});
-
-app.get(base + '/report', function(req,res) {
-	res.send('Report an issue.');
-});
-
-app.post(base + '/report', function(req,res) {
-	res.send('Report an issue with prefilled information.');
-});
-
-app.post(base + '/report/submit', function(req,res) {
-	res.send('Finalizing submitted issue.');
-});
+require('./routes')(app, db);
 
 
 
