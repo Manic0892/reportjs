@@ -4,7 +4,7 @@
 module.exports = function(app,utils) {
 	
 	app.get(base + '/', function(req,res) {
-		res.send('ReportJS');
+		res.send('Report JS');
 	});
 	
 	app.get(base + '/report', function(req,res) {
