@@ -1,7 +1,7 @@
 // # main
 // All "miscellaneous" or "main" routes that are not devoted to a specific function.  Currently just includes handling of /, aka the homepage.
 
-module.exports = function(app,utils) {
+module.exports = function(app,db) {
 	
 	app.get(base + '/', function(req,res) {
 		res.send('Report JS');
