@@ -12,7 +12,7 @@ module.exports = function(app,db) {
 	});
 	
 	app.post(base + '/report', function(req,res) {
-		res.send('Report an issue with prefilled information.');
+		res.send('Report an issue using a prefilled form.');
 	});
 	
 	app.post(base + '/report/submit', function(req,res) {
